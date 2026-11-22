@@ -1,0 +1,14 @@
+
+User-agent: *
+
+
+Disallow: /css/
+
+
+Disallow: /js/
+
+
+Disallow: /images/
+
+
+Sitemap: https://Lucia4568.github.io/billie-eilish/sitemap.xml
