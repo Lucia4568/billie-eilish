@@ -1,0 +1,171 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Oswald:wght@500;600;700&display=swap');
+
+
+:root {
+  --bg: #080b08;
+  --panel: #141a12;
+  --text: #f3f5ef;
+  --muted: #b1b9aa;
+  --accent: #b6ff00;
+  --line: #34402c;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', Arial, sans-serif;
+  line-height: 1.65;
+}
+a { color: inherit; text-decoration: none; }
+
+.header {
+  min-height: 76px;
+  padding: 15px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+
+.logo {
+  font-family: Oswald, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.logo span { color: var(--accent); }
+.nav { display: flex; gap: 28px; }
+.nav a { color: var(--muted); font-size: 14px; }
+.nav a:hover, .nav a.current { color: var(--accent); }
+
+
+.hero {
+  min-height: 530px;
+  padding: 65px 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  align-items: center;
+}
+
+.overline {
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 30px;
+  letter-spacing: 3px;
+}
+
+h1 {
+  margin: 12px 0 18px;
+  font-family: Oswald, sans-serif;
+  font-size: clamp(48px, 9vw, 105px);
+  line-height: 115px;
+  letter-spacing: 1px;
+}
+h1 span, h2 span { color: var(--accent); }
+.lead { max-width: 1100px; color: var(--muted); }
+
+.button {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 20px;
+  background: var(--accent);
+  color: #17121c;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.hero-image { width: 100%; max-width: 500px; justify-self: center; }
+
+.hero-photo {
+  height: 430px;
+  object-fit: cover;
+  object-position: center 12%;
+  border-radius: 4px;
+  border: 1px solid #6b8b32;
+  box-shadow: 0 18px 45px #0009;
+  filter: saturate(.82) contrast(1.08);
+}
+
+.intro { padding: 65px 8% 85px; }
+.intro h2 { max-width: 1000px; font: 600 clamp(32px, 5vw, 52px)/1.15 Oswald, sans-serif; }
+.intro > p:not(.overline) { max-width: 650px; color: var(--muted); }
+
+.quick-links { display: flex; gap: 15px; margin-top: 35px; }
+.quick-links a {
+  flex: 1;
+  padding: 18px;
+  border: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.quick-links strong { color: var(--accent); }
+
+.page { width: 100%; max-width: 1200px; margin: 0 auto; padding: 65px 8% 85px; }
+.page h1 { font-size: clamp(52px, 8vw, 82px); }
+.page-lead { color: var(--muted); max-width: 650px; margin-bottom: 35px; }
+
+.bio-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 30px; align-items: stretch; }
+
+.bio-art { width: 100%; height: 100%; min-height: 100%; background: var(--panel); }
+
+.bio-photo {
+  min-height: 390px;
+  max-height: 700px;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid #607c2d;
+  filter: saturate(.82) contrast(1.08);
+}
+
+.text-card { padding: 25px; background: var(--panel); }
+.text-card h2 { font: 600 25px Oswald, sans-serif; margin: 0 0 8px; }
+.text-card p { color: var(--muted); margin: 0 0 25px; }
+
+.note { margin-top: 25px; padding: 18px 22px; border-left: 3px solid var(--accent); background: var(--panel); color: var(--muted); }
+.note strong { color: var(--text); }
+
+.song-photo {
+  height: 230px;
+  margin: 12px 0 30px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-end;
+  background:
+    linear-gradient(90deg, rgba(5,8,5,.72), rgba(5,8,5,.12)),
+    url("https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/BillieEilishO2140725-39_-_54665577407.jpg/1280px-BillieEilishO2140725-39_-_54665577407.jpg") center 18% / cover;
+  border: 1px solid #526d2b;
+}
+.song-photo span {
+  color: var(--accent);
+  font: 700 13px Oswald, sans-serif;
+  letter-spacing: 4px;
+  text-shadow: 0 2px 8px #000;
+}
+
+.song-list { border-top: 1px solid var(--line); }
+
+.song { display: grid; grid-template-columns: 45px 1fr 55px; gap: 18px; padding: 20px 5px; border-bottom: 1px solid var(--line); align-items: start; }
+.song-number, .year { color: var(--accent); font-size: 13px; font-weight: 700; }
+.song h2 { margin: 0 0 5px; font: 600 25px Oswald, sans-serif; }
+.song p { margin: 0; color: var(--muted); font-size: 14px; }
+.year { text-align: right; }
+.small-note { margin-top: 25px; color: #918b98; font-size: 12px; }
+
+.footer {
+  padding: 22px 8%;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  color: #918b98;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
